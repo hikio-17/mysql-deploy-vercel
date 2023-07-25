@@ -6,7 +6,7 @@ const regionsController = {
          const id = '1'
          const { name } = req.body
          console.log(req.body);
-         const sql = "insert into regions (name) values (?)"
+         const sql = "insert into Regions (name) values (?)"
          const [rows, fields] = await pool.query(sql, [name])
          res.json({
              data: rows
