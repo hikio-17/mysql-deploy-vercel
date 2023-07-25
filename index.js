@@ -8,8 +8,10 @@ app.use(express.json())
 
 const postsRouter = require('./routes/posts.router')
 const authRouter = require('./routes/auth.router')
+const regionRouter = require('./routes/region.router')
 
 app.use("/api/v1/posts", postsRouter)
+app.use("/api/v1/regions", regionRouter)
 app.use("/api/v1/auth", authRouter)
 
 const PORT = process.env.PORT || 5000
