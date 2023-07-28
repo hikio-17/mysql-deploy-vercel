@@ -1,9 +1,12 @@
-const express = require("express")
+const express = require("express");
+const cors = require('cors');
+
 const app = express()
 
 require('dotenv').config()
 
-app.use(express.urlencoded({extended: false}))
+app.use(cors());
+app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 const regionRouter = require('./routes/regionRoute')
