@@ -6,13 +6,14 @@ require('dotenv').config()
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
-const postsRouter = require('./routes/posts.router')
-const authRouter = require('./routes/auth.router')
-const regionRouter = require('./routes/region.router')
+const regionRouter = require('./routes/regionRoute')
+const { errorHandler } = require("./middleware/errorHandler")
 
 app.use("/api/v1/posts", postsRouter)
 app.use("/api/v1/regions", regionRouter)
 app.use("/api/v1/auth", authRouter)
+
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000
 
