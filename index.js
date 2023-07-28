@@ -10,7 +10,7 @@ const regionRouter = require('./routes/regionRoute')
 const { errorHandler } = require("./middleware/errorHandler")
 
 /** MAIN ROUTE */
-app.use("/api/v1/regions", regionRouter)
+app.use("/api/v1", regionRouter)
 
 
 /** GLOBAL ERROR ROUTE */
