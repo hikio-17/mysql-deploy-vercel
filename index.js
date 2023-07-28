@@ -28,12 +28,4 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000
 
-db.sequelize.authenticate().then(async () => {
-    try {
-      app.listen(PORT, () => {
-        console.log(`Server running at http://localhost:${PORT}`);
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  });
+app.listen(PORT, () => console.log('Server is running'))
