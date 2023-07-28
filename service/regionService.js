@@ -1,5 +1,5 @@
 const { nanoid } = require('nanoid')
-const pool = require('../database/index')
+const pool = require('../config/index')
 
 const createRegion = async ({ name }) => {
   const id = `region-${nanoid()}`
