@@ -1,5 +1,5 @@
 const express = require('express');
-const { createRegionHandler } = require('../controller/region.controller');
+const { createRegionHandler } = require('../controller/regionController');
 
 const router = express.Router();
 

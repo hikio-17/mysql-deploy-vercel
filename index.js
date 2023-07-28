@@ -9,10 +9,11 @@ app.use(express.json())
 const regionRouter = require('./routes/regionRoute')
 const { errorHandler } = require("./middleware/errorHandler")
 
-app.use("/api/v1/posts", postsRouter)
+/** MAIN ROUTE */
 app.use("/api/v1/regions", regionRouter)
-app.use("/api/v1/auth", authRouter)
 
+
+/** GLOBAL ERROR ROUTE */
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000
